@@ -1,8 +1,8 @@
-package com.example.restapi
+package com.example.rest_api
 
 import com.example.rest_api.model.SchoolClass
 
 interface NetworkListener {
-    fun onSchollClassesResponse(models: List<SchoolClass>?)
-    fun onSchollClassesFailure(message: String?)
+    fun onSchoolClassesResponse(models: List<SchoolClass>?)
+    fun onSchoolClassesFailure(message: String?)
 }

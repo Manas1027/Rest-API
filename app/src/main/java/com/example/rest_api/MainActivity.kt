@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.example.restapi.NetworkHelper
-import com.example.restapi.NetworkListener
 import com.example.restapi.SchoolClassAdapter
 import com.example.rest_api.model.SchoolClass
 import com.example.restapi.retrofit.ApiClient
@@ -29,11 +27,13 @@ class MainActivity : AppCompatActivity(), NetworkListener {
         networkHelper.getClasses(this)
     }
 
-    override fun onSchollClassesResponse(models: List<SchoolClass>?) {
-        adapter.models = models?
+    override fun onSchoolClassesResponse(models: List<SchoolClass>?) {
+        if (models != null) {
+            adapter.models = models
+        }
     }
 
-    override fun onSchollClassesFailure(message: String?) {
+    override fun onSchoolClassesFailure(message: String?) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 }
