@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.restapi.NetworkHelper
 import com.example.restapi.NetworkListener
 import com.example.restapi.SchoolClassAdapter
-import com.example.restapi.model.SchoolClass
+import com.example.rest_api.model.SchoolClass
 import com.example.restapi.retrofit.ApiClient
 import kotlinx.android.synthetic.main.activity_main.*
 

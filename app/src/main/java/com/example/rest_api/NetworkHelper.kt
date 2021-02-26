@@ -1,7 +1,7 @@
 package com.example.restapi
 
 import android.telecom.Call
-import com.example.restapi.model.SchoolClass
+import com.example.rest_api.model.SchoolClass
 import com.example.restapi.retrofit.ApiInterface
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -13,8 +13,8 @@ class NetworkHelper(private val apiClient: Retrofit) {
         val call: Call<List<SchoolClass>> = apiClient.create(ApiInterface::class.java).getClasses()
         call.enqueue(object: Callback<List<SchoolClass>> {
             override fun onResponse(
-                call: Call<List<SchoolClass>>?,
-                response: Response<List<SchoolClass>>?
+                    call: Call<List<SchoolClass>>?,
+                    response: Response<List<SchoolClass>>?
             ) {
                 listener.onSchollClassesResponse(response?.body())
             }

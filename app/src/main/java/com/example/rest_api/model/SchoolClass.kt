@@ -1,4 +1,4 @@
-package com.example.restapi.model
+package com.example.rest_api.model
 
 data class SchoolClass(
     val id: Int,

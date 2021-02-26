@@ -1,6 +1,6 @@
 package com.example.restapi
 
-import com.example.restapi.model.SchoolClass
+import com.example.rest_api.model.SchoolClass
 
 interface NetworkListener {
     fun onSchollClassesResponse(models: List<SchoolClass>?)
