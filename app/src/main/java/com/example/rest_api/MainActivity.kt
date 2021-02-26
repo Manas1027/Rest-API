@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.example.restapi.SchoolClassAdapter
-import com.example.rest_api.model.SchoolClass
-import com.example.restapi.retrofit.ApiClient
+import com.example.rest_api.model.Rezultat
+import com.example.rest_api.retrofit.ApiClient
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NetworkListener {
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity(), NetworkListener {
         networkHelper.getClasses(this)
     }
 
-    override fun onSchoolClassesResponse(models: List<SchoolClass>?) {
+    override fun onSchoolClassesResponse(models: List<Rezultat>?) {
         if (models != null) {
             adapter.models = models
         }

@@ -1,4 +1,4 @@
-package com.example.restapi.retrofit
+package com.example.rest_api.retrofit
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -11,14 +11,14 @@ class ApiClient {
         private lateinit var gson: Gson
 
         fun getClient(): Retrofit{
-            if(!::gson.isInitialized){
+            if(!Companion::gson.isInitialized){
                 gson = GsonBuilder()
                     .setLenient()
                     .create()
             }
-            if(!::retrofit.isInitialized){
+            if(!Companion::retrofit.isInitialized){
                 retrofit = Retrofit.Builder()
-                    .baseUrl("http://api.texnopos.uz/")
+                    .baseUrl("https://codeforces.com/api/")
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build()
             }
