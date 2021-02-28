@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), NetworkListener {
     }
 
     private fun setData(){
-        networkHelper.getClasses(this)
+        networkHelper.getClasses(this, 79)
     }
 
     override fun onSchoolClassesResponse(models: List<Rezultat>?) {

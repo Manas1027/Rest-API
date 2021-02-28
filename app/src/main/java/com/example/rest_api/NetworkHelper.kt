@@ -9,8 +9,8 @@ import retrofit2.Retrofit
 
 class NetworkHelper(private val apiClient: Retrofit) {
 
-    fun getClasses(listener: NetworkListener){
-        val call : retrofit2.Call<SchoolClass> = apiClient.create(ApiInterface::class.java).getClasses()
+    fun getClasses(listener: NetworkListener, id: Int){
+        val call : retrofit2.Call<SchoolClass> = apiClient.create(ApiInterface::class.java).getClasses(id)
         call.enqueue(object : retrofit2.Callback<SchoolClass> {
 
             override fun onFailure(call: retrofit2.Call<SchoolClass>?, t: Throwable?) {
