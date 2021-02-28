@@ -7,6 +7,6 @@ import retrofit2.http.Query
 
 interface ApiInterface {
 
-    @GET("/blogEntry.comments")
+    @GET("/api/blogEntry.comments")
     fun getClasses(@Query("blogEntryId") id: Int): Call<SchoolClass>
 }
